@@ -4,7 +4,6 @@ import ServicesScreen from './screens/ServicesScreen';
 import Footer from './shared/Footer';
 import Navbar from './shared/Navbar';
 import ContactScreen from './screens/ContactScreen';
-import PackagesScreen from "./screens/PackagesScreen";
 import PackageDetailsScreen from "./screens/PackageDetailsScreen";
 import Destinations from "./screens/Destinations";
 
@@ -17,7 +16,6 @@ function App() {
                 <Route path='/services' element={<ServicesScreen/>}/>
                 <Route path='/contact' element={<ContactScreen/>}/>
                 <Route path='/destinations' element={<Destinations/>}/>
-                <Route path='/package' element={<PackagesScreen/>}/>
                 <Route path='/package/:place' element={<PackageDetailsScreen/>}/>
                 <Route path='/package/:place/:packageName' element={<PackageDetailsScreen/>}/>
             </Routes>
