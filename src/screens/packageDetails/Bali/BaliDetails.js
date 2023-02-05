@@ -2,13 +2,16 @@ import React, {useState} from "react";
 import bDb from '../packageDb/bali.json'
 
 const BaliDetails = ({packName}) => {
+    const {bali} = bDb;
+
     let packDetails = {};
     const [selDay, setSelDay] = useState("One")
     const [dayEvt, setDayEvt] = useState({})
     const [dayIdx, setDayIdx] = useState(0)
 
-    bDb.bali.map(b => {
-        if (b.link === packName) {
+    bali.map(b => {
+        if (b.link === window.location.pathname) {
+            console.log(b.link, window.location.pathname)
             packDetails = b;
         }
     })
@@ -32,7 +35,7 @@ const BaliDetails = ({packName}) => {
         <hr/>
         <div className="day-content mt-4">
             <div className="arrow"></div>
-            <h3>Day {selDay}</h3>
+            <h3 className={'text-uppercase'}>Day {selDay}</h3>
             <ul>
                 {packDetails.day_wise[dayIdx].desc}
             </ul>

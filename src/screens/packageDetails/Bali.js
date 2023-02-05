@@ -4,27 +4,27 @@ import {Link, useParams} from "react-router-dom";
 import BaliDetails from "./Bali/BaliDetails";
 
 const Bali = () => {
-    const {packageName} = useParams();
+    const {bali} = bDb;
 
-    if (packageName !== undefined) {
-        switch (packageName) {
-            case "dazzling-bali-family-package":
-                return <BaliDetails packName={packageName}/>
-            case "futuristic-bali-package":
-                return <BaliDetails packName={packageName}/>
-            case "fully-loaded-family-package":
-                return <BaliDetails packName={packageName}/>
-            case "glamorous-couple-package":
-                return <BaliDetails packName={packageName}/>
-            default:
-                return <p className={'text-center'}>404</p>
-        }
+    const {packageName} = useParams();
+    console.log(packageName)
+    switch (packageName) {
+        case "dazzling-bali-family-package":
+            return <BaliDetails packName={packageName}/>
+        case "futuristic-bali-package":
+            return <BaliDetails packName={packageName}/>
+        case "fully-loaded-family-package":
+            return <BaliDetails packName={packageName}/>
+        case "glamorous-couple-package":
+            return <BaliDetails packName={packageName}/>
+        default:
+            return <p className={'text-center'}>404</p>
     }
 
     return <div className={"container"}>
         <div className="row row-cols-sm-1 row-cols-md-2">
-            {bDb.bali.map(pack => (
-                <div className="col justify-content-center mb-3 h-100">
+            {bali.map(pack => (
+                <div className="col justify-content-center mb-3 h-100" key={pack.name}>
                     <div className="card mb-2">
                         <div className="card-body">
                             <h5 className="card-title">{pack.name}</h5>

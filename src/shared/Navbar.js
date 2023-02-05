@@ -1,17 +1,18 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 const Navbar = () => {
     return (<>
         <nav className='navbar navbar-expand-md bg-body sticky-top py-3' id='mainNav'>
             <div className='container'>
-                <a className='navbar-brand d-flex align-items-center' href='/'>
+                <Link to={'/'} className='navbar-brand d-flex align-items-center'>
                     <span
                         className='bs-icon-sm bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon'>
                         <img src="/assets/img/brands/logo.png" className="nav-image"/>
                     </span>
-                </a>
-                <button data-bs-toggle='collapse' className='navbar-toggler' data-bs-target='#navcol-1'>
+                </Link>
+                <button
+                    data-bs-toggle='collapse' className='btn buttonp navbar-toggler' data-bs-target='#navcol-1'>
                     <span className='visually-hidden'>Toggle navigation</span>
                     <span className='navbar-toggler-icon'></span>
                 </button>
@@ -30,16 +31,10 @@ const Navbar = () => {
                         </li>
                         <li className='nav-item'>
                             <NavLink className={({isActive}) => (isActive ? 'nav-link active' : 'nav-link')}
-                                     to='/projects'>
-                                Projects
+                                     to='/destinations'>
+                                Destinations
                             </NavLink>
                         </li>
-                        <div className="nav-item">
-                            <NavLink className={({isActive}) => (isActive ? 'nav-link active' : 'nav-link')}
-                                     to='/package'>
-                                Packages
-                            </NavLink>
-                        </div>
                         <li className='nav-item'>
                             <NavLink to='contact'
                                      className={({isActive}) => (isActive ? 'nav-link active' : 'nav-link')}>

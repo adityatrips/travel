@@ -3,7 +3,7 @@
     {
       "code": "4 Nights & 5 Days",
       "name": "Dazzling Bali Family Package",
-      "link": "dazzling-bali-family-package",
+      "link": "/package/bali/dazzling-bali-family-package",
       "day_wise": [
         {
           "day": "One",
@@ -29,7 +29,7 @@
     },
     {
       "code": "5 Nights & 6 Days",
-      "link": "futuristic-bali-package",
+      "link": "/package/bali/futuristic-bali-package",
       "name": "Futuristic Bali",
       "day_wise": [
         {
@@ -61,7 +61,7 @@
     {
       "code": "6 Nights & 7 Days",
       "name": "Fully Loaded Family Package",
-      "link": "fully-loaded-family-package",
+      "link": "/package/bali/fully-loaded-family-package",
       "day_wise": [
         {
           "day": "One",
@@ -96,7 +96,7 @@
     {
       "code": "6 Nights & 7 Days",
       "name": "Glamorous Couple Package",
-      "link": "glamorous-couple-package",
+      "link": "/package/bali/glamorous-couple-package",
       "day_wise": [
         {
           "day": "One",
