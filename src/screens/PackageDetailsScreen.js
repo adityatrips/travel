@@ -4,6 +4,7 @@ import Bali from "./packageDetails/Bali";
 import Dubai from "./packageDetails/Dubai";
 import Europe from "./packageDetails/Europe";
 import Singapore from "./packageDetails/Singapore";
+import Thailand from "./packageDetails/Thailand";
 
 const PackageDetailsScreen = () => {
     const {place} = useParams();
@@ -17,6 +18,8 @@ const PackageDetailsScreen = () => {
             return <Europe/>
         case "singapore":
             return <Singapore/>
+        case "thailand":
+            return <Thailand/>
         default:
             return <p className="text-center">404</p>
     }

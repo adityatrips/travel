@@ -3,6 +3,7 @@ import bDb from './packageDetails/packageDb/bali.json';
 import dDb from './packageDetails/packageDb/dubai.json';
 import eDb from './packageDetails/packageDb/europe.json';
 import sDb from './packageDetails/packageDb/singapore.json';
+import tDb from './packageDetails/packageDb/thailand.json';
 import {Link} from "react-router-dom";
 
 const Destinations = () => {
@@ -10,6 +11,7 @@ const Destinations = () => {
     const {dubai} = dDb;
     const {europe} = eDb;
     const {singapore} = sDb;
+    const {thailand} = tDb;
     const [scope, setScope] = useState("intl");
     const [subLocData, setSubLocData] = useState(bali)
 
@@ -27,6 +29,9 @@ const Destinations = () => {
                 break;
             case "singapore":
                 setSubLocData(singapore);
+                break;
+            case "thailand":
+                setSubLocData(thailand);
                 break;
             default:
                 console.log("DEF")
