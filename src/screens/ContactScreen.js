@@ -13,7 +13,7 @@ const ContactScreen = () => {
                 <div className='row d-flex justify-content-center'>
                     <div className='col-md-6 col-xl-4'>
                         <div>
-                            <form className='p-3 p-xl-4' method='post'>
+                            <form className='p-3 p-xlb-4' method='post'>
                                 <div className='mb-3'>
                                     <input className='form-control' type='text' id='name-1' name='name'
                                            placeholder='Name'/>
@@ -23,8 +23,16 @@ const ContactScreen = () => {
                                            placeholder='Email'/>
                                 </div>
                                 <div className='mb-3'>
+                                    <input className='form-control' type='phone' id='phone-1' name='phone'
+                                           placeholder='Phone Number'/>
+                                </div>
+                                <div className='mb-3'>
+                                    <input className='form-control' type='text' id='package-1' name='package'
+                                           placeholder='Package Code'/>
+                                </div>
+                                <div className='mb-3'>
                                     <textarea className='form-control' id='message-1' name='message' rows='6'
-                                              placeholder='Message'></textarea>
+                                              placeholder="Anything you'd want to tell us"></textarea>
                                 </div>
                                 <div>
                                     <button className='btn button  d-block w-100' type='submit'>
@@ -48,7 +56,7 @@ const ContactScreen = () => {
                                 </div>
                                 <div className='px-2'>
                                     <h6 className='fw-bold mb-0'>Phone</h6>
-                                    <p className='text-muted mb-0'>+123456789</p>
+                                    <a href={'tel:+919811264672'} className='text-muted mb-0'>+91 9811264672</a>
                                 </div>
                             </div>
                             <div className='d-flex align-items-center p-3'>
@@ -62,7 +70,8 @@ const ContactScreen = () => {
                                 </div>
                                 <div className='px-2'>
                                     <h6 className='fw-bold mb-0'>Email</h6>
-                                    <p className='text-muted mb-0'>info@example.com</p>
+                                    <a href={'mailto:support@sofartravel.in'}
+                                       className='text-muted mb-0'>support@sofartravel.in</a>
                                 </div>
                             </div>
                             <div className='d-flex align-items-center p-3'>
@@ -76,7 +85,8 @@ const ContactScreen = () => {
                                 </div>
                                 <div className='px-2'>
                                     <h6 className='fw-bold mb-0'>Location</h6>
-                                    <p className='text-muted mb-0'>12 Example Street</p>
+                                    <p className='text-muted mb-0'>Shop No 2 Second Floor, Market, Sewa Nagar, New
+                                        Delhi, 110003</p>
                                 </div>
                             </div>
                         </div>
