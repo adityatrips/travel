@@ -41,36 +41,70 @@ const DubaiDetails = () => {
                 </ul>
             </div>
             <hr/>
-            <h3 className={'text-uppercase'}>Accommodation</h3>
-            <ul>
-                {packDetails.accommodation.map(a => (
-                    <li>{a}</li>
-                ))}
-            </ul>
-            <hr/>
-            <h3 className={'text-uppercase'}>Inclusions</h3>
-            {
-                Object.entries(packDetails.inclusions).map((k) => {
-                    return (
-                        <>
-                            <h4>{k[0]}</h4>
-                            <ul>
-                                {k[1].map(p => (
-                                    <li>{p}</li>
-                                ))}
-                            </ul>
-                        </>
-                    )
-                })
-            }
-            <hr/>
-            <h3 className={'text-uppercase'}>Exclusions</h3>
-            <ul>
-                {packDetails.exclusions.map(i => (
-                    <li>{i}</li>
-                ))}
-            </ul>
-            <hr/>
+            <div className="accordion accordion-flush" id="accordionFlushExample">
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="flush-headingOne">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOneTwo" aria-expanded="false"
+                                aria-controls="flush-collapseOneTwo">
+                            Inclusions
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOneTwo" className="accordion-collapse collapse"
+                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            {
+                                Object.entries(packDetails.inclusions).map((k) => {
+                                    return (
+                                        <>
+                                            <h4>{k[0]}</h4>
+                                            <ul>
+                                                {k[1].map(p => (
+                                                    <li>{p}</li>
+                                                ))}
+                                            </ul>
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="flush-headingTwo">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                            Accommodation
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" className="accordion-collapse collapse"
+                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            {packDetails.accommodation.map(a => (
+                                <li>{a}</li>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="flush-headingThree">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                            Exclusions
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" className="accordion-collapse collapse"
+                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            {packDetails.exclusions.map(i => (
+                                <li>{i}</li>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
