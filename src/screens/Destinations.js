@@ -5,6 +5,7 @@ import eDb from './packageDetails/packageDb/europe.json';
 import sDb from './packageDetails/packageDb/singapore.json';
 import tDb from './packageDetails/packageDb/thailand.json';
 import kDb from './packageDetails/packageDb/kerala.json';
+import iDb from './packageDetails/packageDb/india.json';
 import {Link} from "react-router-dom";
 
 const Destinations = () => {
@@ -14,6 +15,8 @@ const Destinations = () => {
     const {singapore} = sDb;
     const {thailand} = tDb;
     const {kerala} = kDb;
+    const {india} = iDb;
+
     const [subLocData, setSubLocData] = useState(bali)
 
     const handleSubLoc = (value) => {
@@ -35,6 +38,9 @@ const Destinations = () => {
                 break;
             case "kerala":
                 setSubLocData(kerala);
+                break;
+            case "india":
+                setSubLocData(india);
                 break;
             default:
                 console.log("DEF")
